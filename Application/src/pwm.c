@@ -90,7 +90,7 @@ void pwm2_config (void)
 	TIM_TimeBaseStructInit(&TIM_BaseInitStructure);
 	TIM_BaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	TIM_BaseInitStructure.TIM_Prescaler = 84-1;		// 1us 
-	TIM_BaseInitStructure.TIM_Period = 1000/FREQ2-1;
+	TIM_BaseInitStructure.TIM_Period = 10000/FREQ2-1;
 	TIM_TimeBaseInit(TIM4,&TIM_BaseInitStructure);
 	
 	TIM_OCStructInit(&TIM_OCInitStructure);
@@ -120,13 +120,13 @@ void TIM3_IRQHandler()
 	float arg;
 	uint32_t reg;
 	
-	arg = 1 + sin(cnt*2*3.14/1000);				// values from 0 to 2
-	reg = arg*1000/FREQ1/2;
+	arg = 1 + sin(cnt*2*3.14/100);				// values from 0 to 2
+	reg = arg*10000/FREQ1/2;
 	
 	TIM3->CCR3 = reg;
 	
 	cnt++;
-	if (cnt >= 1000)
+	if (cnt >= 100)
 		cnt = 0;
 	
 }
@@ -140,13 +140,13 @@ void TIM4_IRQHandler()
 	float arg;
 	uint32_t reg;
 	
-	arg = 1 + sin(cnt*2*3.14/1000);				// values from 0 to 2
-	reg = arg*1000/FREQ2/2;
+	arg = 1 + sin(cnt*2*3.14/100);				// values from 0 to 2
+	reg = arg*10000/FREQ2/2;
 	
 	TIM4->CCR3 = reg;
 	
 	cnt++;
-	if (cnt >= 1000)
+	if (cnt >= 100)
 		cnt = 0;
 	
 }

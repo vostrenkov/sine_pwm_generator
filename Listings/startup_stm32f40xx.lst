@@ -871,11 +871,11 @@ ARM Macro Assembler    Page 14
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=.\objects\startup_stm32f40xx.d -o.\objects\startup_stm32f40xx.o
- -IC:\Projects\sine_pwm_generator\RTE -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\
-2.11.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include -IC:\Keil_v5\ARM\CMSIS\Include
- --predefine="__UVISION_VERSION SETA 515" --predefine="STM32F407xx SETA 1" --li
-st=.\listings\startup_stm32f40xx.lst Library\CMSIS\Device\ST\STM32F4xx\Source\T
-emplates\arm\startup_stm32f40xx.s
+ -I.\RTE\_sine_generator -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.11.0\Driver
+s\CMSIS\Device\ST\STM32F4xx\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine=
+"__UVISION_VERSION SETA 523" --predefine="STM32F407xx SETA 1" --list=.\listings
+\startup_stm32f40xx.lst Library\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\
+startup_stm32f40xx.s
 
 
 

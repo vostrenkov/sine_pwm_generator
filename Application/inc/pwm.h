@@ -10,8 +10,8 @@
 #include "defines.h"
 #include "soft_timer.h"
 
-#define FREQ1			20
-#define FREQ2			20
+#define FREQ1			50
+#define FREQ2			50
 
 void pwm1_config (void);
 void pwm2_config (void);
