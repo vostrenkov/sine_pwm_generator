@@ -34,7 +34,7 @@ void pwm1_config (void)
 	TIM_TimeBaseStructInit(&TIM_BaseInitStructure);
 	TIM_BaseInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
 	TIM_BaseInitStructure.TIM_Prescaler = 84-1;		// 1us 
-	TIM_BaseInitStructure.TIM_Period = 1000/FREQ1-1;
+	TIM_BaseInitStructure.TIM_Period = 10000/FREQ1-1;
 	TIM_TimeBaseInit(TIM3,&TIM_BaseInitStructure);
 	
 	TIM_OCStructInit(&TIM_OCInitStructure);
