@@ -1,0 +1,12 @@
+DebugConfig
+*/Listings
+*.tmp
+*.a
+*.o
+*/Objects/*
+!*/Objects/*.hex
+*.dep
+*.log
+*.axf
+*.TMP
+*.uvguix.*
